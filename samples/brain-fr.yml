@@ -1,0 +1,11 @@
+---
+  - name: "twitchtv-who-is-streaming"
+    signals:
+      - order: "Qui stream en ce moment"
+      - order: "qui joue à Starcraft"
+    neurons:
+      - twitchtv:
+          client_id: "{{twitch_client_id}}"
+          limit: 55
+          user: "{{twitch_username}}"
+          file_template: "templates/twitchtv.j2"

@@ -1,0 +1,11 @@
+---
+  - name: "twitchtv-who-is-streaming"
+    signals:
+      - order: "Who is streaming right now?"
+      - order: "Who is playing right now?"
+    neurons:
+      - twitchtv:
+          client_id: "{{twitch_client_id}}"
+          limit: 55
+          user: "{{twitch_username}}"
+          file_template: "templates/twitchtv.j2"

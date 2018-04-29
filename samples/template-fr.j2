@@ -1,0 +1,4 @@
+{{number}} de vos joueurs préférés sont en train de streamer:
+{% for streamer in streamers %}
+  {{streamer['name']}} diffuse {{streamer['status']}}
+{% endfor %}

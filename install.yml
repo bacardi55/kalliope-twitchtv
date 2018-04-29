@@ -1,0 +1,11 @@
+- name: Kalliope Twitch TV neuron
+  hosts: localhost
+  gather_facts: no
+  connection: local
+  become: true
+
+  tasks:
+    - name: "Install pip dependencies"
+      pip:
+        name: python-twitch-client
+        version: 0.5.1
